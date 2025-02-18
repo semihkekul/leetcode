@@ -15,7 +15,7 @@ public:
         {
             if(ratings[i-1] > ratings[i] && candies[i-1] <= candies[i] )
             {
-                candies[i-1] = candies[i] + 1;
+                candies[i-1] = std::max(candies[i] + 1, candies[i-1]);
             }
         }
 
